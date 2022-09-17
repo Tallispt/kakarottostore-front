@@ -11,6 +11,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
 // pages
+import Home from './pages/Home/Home';
 
 const RoutesApp = () => {
 
@@ -20,7 +21,7 @@ const RoutesApp = () => {
         <BrowserRouter>
             <Header />
             <Routes>
-                
+                <Route path="/" element={<Home />} />
             </Routes>
             <Footer />
         </BrowserRouter>
