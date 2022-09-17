@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Creepster&family=Montserrat+Alternates&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Creepster&family=Montserrat+Alternates&family=Press+Start+2P&family=Roboto&family=Secular+One&display=swap');
 
 * {
     box-sizing: border-box;
@@ -101,7 +101,7 @@ html, body, #root{
     background-color: transparent; 
     
     z-index: 6;
-
+    position: absolute;
 }
 
 .icon.icon_active .hamburguer::after {
