@@ -29,13 +29,16 @@ const Header = ({ dataUser }) => {
                     <nav className="nav_container">
                         <ul>
                             <li>
-                                Página Inicial
+                                <Link to={"/"}>Página Inicial</Link>
                             </li>
                             <li>
-                                Produtos
+                                <Link to={"/t-shirts"}>Camisetas</Link>
                             </li>
                             <li>
-                                Contato
+                                <Link to={"/sweatshits"}>Moletons</Link>
+                            </li>
+                            <li>
+                                <Link to={"/contact"}>Contato</Link>
                             </li>
                         </ul>
                     </nav>
@@ -43,7 +46,9 @@ const Header = ({ dataUser }) => {
             </div>
 
             <div className={styles.title_container}>
-                <h1>KakarottoStore</h1>
+                <Link to={"/"}>
+                    <h1>KakarottoStore</h1>
+                </Link>
             </div>
 
             <div className={styles.infoUser_container}>
