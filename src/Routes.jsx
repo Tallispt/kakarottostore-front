@@ -18,8 +18,8 @@ const RoutesApp = () => {
     return(
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/login" element={<Login />} />
+                <Route path="/" element={<Home dataUser={dataUser} />} />
+                <Route path="/login" element={<Login setDataUser={setDataUser} />} />
                 <Route path="/registration" element={<Registration />} />
             </Routes>
         </BrowserRouter>

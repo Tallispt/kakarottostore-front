@@ -10,10 +10,10 @@ import itachi from '../../assets/imgs/home/itachi-sharingan.jpg';
 import akatsuki from '../../assets/imgs/home/akatsuki.jpeg';
 
 
-const Home = () => {
+const Home = ({ dataUser }) => {
     return(
         <>
-            <Header />
+            <Header dataUser={dataUser} />
             <main className={styles.main_container}>
                 <section className={styles.section_container}>
                     <img src={itachi} alt="Moletom | Itachi | Sharingan" />

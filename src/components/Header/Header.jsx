@@ -9,7 +9,9 @@ import { Link } from 'react-router-dom';
 // react-icons
 import { FaUserCircle, FaRegUserCircle, FaShoppingCart } from 'react-icons/fa'
 
-const Header = () => {
+const Header = ({ dataUser }) => {
+
+    console.log(dataUser);
 
     const [ active, setActive ] = useState(false);
 
@@ -46,13 +48,21 @@ const Header = () => {
 
             <div className={styles.infoUser_container}>
                 <div className={styles.infoUser}>
-                    <Link to={"/login"}>
-                        <FaUserCircle title="Login" className={styles.icon} /> 
-                    </Link>
-                    <span className={styles.bar}></span> 
-                    <Link to={"/registration"}>
-                        <FaRegUserCircle title="Cadastre-se" className={styles.icon} />
-                    </Link>
+                    {dataUser  ? 
+                                    <p className={styles.nameUser}>Bem-vindo, {dataUser.name}!</p>
+                                    
+                                    : 
+                                    
+                                    <>
+                                        <Link to={"/login"}>
+                                            <FaUserCircle title="Login" className={styles.icon} /> 
+                                        </Link>
+                                        <span className={styles.bar}></span> 
+                                        <Link to={"/registration"}>
+                                            <FaRegUserCircle title="Cadastre-se" className={styles.icon} />
+                                        </Link>
+                                    </>
+                    }
                 </div>
 
                 <div className={styles.cart_shopping}>
