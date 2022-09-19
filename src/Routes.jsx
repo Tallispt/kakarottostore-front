@@ -13,6 +13,7 @@ import Registration from './pages/Registration/Registration';
 import TShirts from './pages/Products/TShirts/TShirts';
 import Sweatshirts from './pages/Products/Sweatshirt/Sweatshirts';
 import Contact from './pages/Contact/Contact';
+import Product from './pages/Product/Product';
 
 const RoutesApp = () => {
 
@@ -27,6 +28,7 @@ const RoutesApp = () => {
                 <Route path="/t-shirts" element={<TShirts />} />
                 <Route path="/sweatshits" element={<Sweatshirts />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/product" element={<Product />} />
             </Routes>
         </BrowserRouter>
     )

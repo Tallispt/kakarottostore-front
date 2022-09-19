@@ -1,6 +1,9 @@
 // css
 import styles from './Home.module.css';
 
+// react-router-dom
+import { Link } from 'react-router-dom';
+
 // componentes
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
@@ -20,7 +23,7 @@ const Home = ({ dataUser }) => {
                     <div className={styles.overlay}></div>
                     <div className={styles.content}>
                         <span>Moletons</span>
-                        <button>comprar</button>
+                        <Link to={"/sweatshits"} className={styles.button}>comprar</Link>
                     </div>
                 </section>
                 <section className={styles.section_container}>
@@ -28,7 +31,7 @@ const Home = ({ dataUser }) => {
                     <div className={styles.overlay2}></div>
                     <div className={styles.content2}>
                         <span>Camisetas</span>
-                        <button>comprar</button>
+                        <Link to={"/t-shirts"} className={styles.button}>comprar</Link>
                     </div>
                 </section>
             </main>
