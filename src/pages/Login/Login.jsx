@@ -1,8 +1,5 @@
 import { useState } from 'react';
 
-// css
-import styles from './Login.module.css';
-
 // react-router-dom
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -12,16 +9,18 @@ import { toast } from 'react-toastify';
 // axios
 import axios from 'axios';
 
+import { MainContainer } from './LoginStyle.js';
+
 const Login = ({ setDataUser }) => {
 
     const navigate = useNavigate();
 
-    const [ dataLogin, setDataLogin ] = useState({ email: "", password: ""});
+    const [dataLogin, setDataLogin] = useState({ email: "", password: "" });
 
-    async function handleLogin(event)    {
+    async function handleLogin(event) {
         event.preventDefault();
 
-        if(dataLogin.email === "" || dataLogin.password === "") {
+        if (dataLogin.email === "" || dataLogin.password === "") {
 
             toast.warn("Preencha todos os campos!");
             return;
@@ -39,8 +38,8 @@ const Login = ({ setDataUser }) => {
             console.log(data);
 
             navigate("/");
-        
-        } catch(error) {
+
+        } catch (error) {
 
             console.log(error);
             toast.error("Erro. Tente novamente mais tarde!");
@@ -48,30 +47,30 @@ const Login = ({ setDataUser }) => {
         }
     }
 
-    return(
-        <main className={styles.main_container}>
-            <form className={styles.form_container}>
-                    <h1>Login</h1>
+    return (
+        <MainContainer>
+            <form className="form_container">
+                <h1>Login</h1>
 
-                    <div className={styles.field}>
-                        <input type="email" id="email" required onChange={event => setDataLogin({...dataLogin, email: event.target.value})} />
-                        <span></span>
-                        <label htmlFor="email">E-mail</label>
-                    </div>
-
-                    <div className={styles.field}>
-                        <input type="password" id="password" required onChange={event => setDataLogin({...dataLogin, password: event.target.value})} />
-                        <span></span>
-                        <label htmlFor="password">Senha</label>
-                    </div>
-
-                    <input type="submit" value="Entrar" className={styles.submit} onClick={handleLogin} />
-                </form>
-                <div className={styles.containerBlue}>
-                    <span>Ainda não possui uma conta?</span>
-                    <Link to={"/registration"} className={styles.link}>Criar conta</Link>
+                <div className="field">
+                    <input type="email" id="email" required onChange={event => setDataLogin({ ...dataLogin, email: event.target.value })} />
+                    <span></span>
+                    <label htmlFor="email">E-mail</label>
                 </div>
-        </main>
+
+                <div className="field">
+                    <input type="password" id="password" required onChange={event => setDataLogin({ ...dataLogin, password: event.target.value })} />
+                    <span></span>
+                    <label htmlFor="password">Senha</label>
+                </div>
+
+                <input type="submit" value="Entrar" className="submit" onClick={handleLogin} />
+            </form>
+            <div className="containerBlue">
+                <span>Ainda não possui uma conta?</span>
+                <Link to={"/registration"} className="link">Criar conta</Link>
+            </div>
+        </MainContainer>
     )
 };
 

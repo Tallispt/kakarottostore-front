@@ -1,5 +1,4 @@
-// css
-import styles from './Home.module.css';
+import { MainContainer } from './HomeStyle.js'
 
 // react-router-dom
 import { Link } from 'react-router-dom';
@@ -14,27 +13,27 @@ import akatsuki from '../../assets/imgs/home/akatsuki.jpeg';
 
 
 const Home = ({ dataUser }) => {
-    return(
+    return (
         <>
             <Header dataUser={dataUser} />
-            <main className={styles.main_container}>
-                <section className={styles.section_container}>
+            <MainContainer>
+                <section className="section_container">
                     <img src={itachi} alt="Moletom | Itachi | Sharingan" />
-                    <div className={styles.overlay}></div>
-                    <div className={styles.content}>
+                    <div className="overlay"></div>
+                    <div className="content">
                         <span>Moletons</span>
-                        <Link to={"/sweatshits"} className={styles.button}>comprar</Link>
+                        <Link to={"/sweatshits"} className="button">comprar</Link>
                     </div>
                 </section>
-                <section className={styles.section_container}>
+                <section className="section_container">
                     <img src={akatsuki} alt="Camiseta | Akatsuki" />
-                    <div className={styles.overlay2}></div>
-                    <div className={styles.content2}>
+                    <div className="overlay2"></div>
+                    <div className="content2">
                         <span>Camisetas</span>
-                        <Link to={"/t-shirts"} className={styles.button}>comprar</Link>
+                        <Link to={"/t-shirts"} className="button">comprar</Link>
                     </div>
                 </section>
-            </main>
+            </MainContainer>
             <Footer />
         </>
     )

@@ -1,3 +1,29 @@
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+/* Menu Hamburguer */
+html,
+body,
+#root {
+    min-height: 100vh;
+    max-width: 100vw;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+
+    color: #000000;
+}
+
+//RESET CSS
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
     License: none (public domain)
@@ -45,3 +71,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+`
+
+export default GlobalStyle;

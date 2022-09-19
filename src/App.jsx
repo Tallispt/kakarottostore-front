@@ -1,6 +1,9 @@
 // rotas
 import RoutesApp from "./Routes";
 
+//GlobalStyle
+import GlobalStyle from "./assets/styles/GlobalStyles";
+
 // context
 import UserProvider from "./context/User";
 
@@ -10,8 +13,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
-    return(
+    return (
         <UserProvider>
+            <GlobalStyle />
             <ToastContainer autoClose={1500} />
             <RoutesApp />
         </UserProvider>

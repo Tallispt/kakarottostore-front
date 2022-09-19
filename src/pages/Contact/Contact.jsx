@@ -1,5 +1,4 @@
-// css
-import styles from './Contact.module.css';
+import { MainContainer, Email, FormContainer } from './ContactStyle.js';
 
 // react-icons
 import { FaRegEnvelope } from 'react-icons/fa';
@@ -9,32 +8,23 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 
 const Contact = () => {
-    return(
+    return (
         <>
             <Header />
-            <main className={styles.main_container}>
-                <div className={styles.email}>
-                    <FaRegEnvelope className={styles.icon} />
+            <MainContainer>
+                <Email>
+                    <FaRegEnvelope className="icon" />
                     <p>kakarottostore@email.com</p>
-                </div>
+                </Email>
 
-                <form className={styles.form_container}>
-                    <div className={styles.field}>
-                        <input type="text" placeholder="Nome completo" />
-                    </div>
-                    <div className={styles.field}>
-                        <input type="email" placeholder="E-mail" />
-                    </div>
-                    <div className={styles.field}>
-                        <input type="tel" placeholder="Telefone" />
-                    </div>
-                    <div className={styles.field}>
-                        <textarea placeholder="Mensagem"></textarea>
-                    </div>
-
-                    <input type="submit" value="Enviar" className={styles.submit} />
-                </form>
-            </main>
+                <FormContainer>
+                    <input type="text" placeholder="Nome completo" />
+                    <input type="email" placeholder="E-mail" />
+                    <input type="tel" placeholder="Telefone" />
+                    <textarea placeholder="Mensagem"></textarea>
+                    <button type="submit">Enviar</button>
+                </FormContainer>
+            </MainContainer>
             <Footer />
         </>
     )
