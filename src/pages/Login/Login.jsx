@@ -27,7 +27,7 @@ const Login = ({ setDataUser }) => {
 
         }
 
-        const URL = "http://localhost:5000/sign-in";
+        const URL = "https://projeto14-kakarottostore-back.herokuapp.com/sign-in";
 
         try {
 

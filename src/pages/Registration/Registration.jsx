@@ -70,7 +70,7 @@ const Registration = () => {
 
         }
 
-        const URL = "http://localhost:5000/sign-up";
+        const URL = "https://projeto14-kakarottostore-back.herokuapp.com/sign-up";
 
         try {
 
